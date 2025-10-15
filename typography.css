@@ -1,0 +1,61 @@
+:root{
+  --ff-base: 'Inter', system-ui, Arial, sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --gray-600: #4B5563;
+  --gray-900: #111827;
+}
+
+/* base text color */
+html, body { font-family: var(--ff-base); color: var(--gray-900); }
+
+
+
+/* DESKTOP (≥1024px) */
+
+/* Headings */
+h1 { font-size: 60px; line-height: 72px; letter-spacing: -0.02em; font-weight: var(--fw-bold);     color: var(--gray-900);}
+h2 { font-size: 36px; line-height: 40px; letter-spacing: -0.02em; font-weight: var(--fw-semibold); color: var(--gray-900);}
+h3 { font-size: 30px; line-height: 36px;                          font-weight: var(--fw-semibold); color: var(--gray-900);}
+.h3--bold { font-weight: var(--fw-bold); }
+
+
+/* Subtitle */
+.subtitle        { font-size: 20px; line-height: 28px; font-weight: var(--fw-regular);  color: var(--gray-600); }
+.subtitle-semi   { font-size: 20px; line-height: 28px; font-weight: var(--fw-semibold); color: var(--gray-900); }
+
+/* Body */
+.body1 { font-size: 18px; line-height: 28px; font-weight: var(--fw-regular);  color: var(--gray-600); }
+.body2 { font-size: 16px; line-height: 24px; font-weight: var(--fw-regular);  color: var(--gray-600); }
+.body2--underline { text-decoration: underline;}
+.body2--medium    { font-weight: var(--fw-medium);}
+.body2--semi      { font-weight: var(--fw-semibold);}
+.body3 { font-size: 14px; line-height: 20px; font-weight: var(--fw-regular);  color: var(--gray-600); }
+.body3--medium    { font-weight: var(--fw-medium);}
+
+
+/* TABLET (768–1023px) */
+@media (min-width:768px) and (max-width:1023px){
+  h1 { font-size: 48px; line-height: 48px; letter-spacing: -0.02em; font-weight: var(--fw-bold);}
+  h2 { font-size: 18px; line-height: 28px; letter-spacing: -0.02em; font-weight: var(--fw-semibold);}
+  h3 { font-size: 24px; line-height: 32px; font-weight: var(--fw-semibold);}
+
+  .subtitle, .subtitle-semi { font-size: 18px; line-height: 28px; }
+  .body1 { font-size: 16px; line-height: 24px; }
+}
+
+
+
+/* MOBILE (<768px) */
+@media (max-width:767px){
+  h1 { font-size: 36px; line-height: 40px; letter-spacing: -0.02em; font-weight: var(--fw-semibold); margin:0;}
+  h2 { font-size: 18px; line-height: 28px; letter-spacing: -0.02em; font-weight: var(--fw-semibold); margin:0;}
+  h3 { font-size: 24px; line-height: 32px; font-weight: var(--fw-semibold);}
+
+  .subtitle, .subtitle-semi { font-size: 18px; line-height: 28px; }
+  .body1 { font-size: 16px; line-height: 24px; }
+}
+

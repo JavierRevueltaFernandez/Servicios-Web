@@ -4,524 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="typography.css">
     <title>Portfolio - Javier Revuelta</title>
-
-    <style>
-
-        /*Estilos generales*/
-        :root {
-
-        /* Tipografía */
-        --font-family: 'Inter', sans-serif;
-
-        /* Estilos headings */
-        --h1-desktop-size: 60px;
-        --h1-desktop-line: 72px;
-        --h1-desktop-weight: 700;
-
-        --h2-desktop-size: 36px;
-        --h2-desktop-line: 40px;
-        --h2-desktop-weight: 600;
-
-        --h3-desktop-size: 30px;
-        --h3-desktop-line: 36px;
-        --h3-desktop-weight: 600;
-
-        /* Subtítulo y cuerpos */
-        --subtitle-size: 20px;
-        --subtitle-line: 28px;
-        --subtitle-weight: 400;
-        
-        --body1-size: 18px;
-        --body1-line: 28px;
-        --body1-weight: 400;
-        
-        --body2-size: 16px;
-        --body2-line: 24px;
-        --body2-weight: 400;
-
-        --body3-size: 14px;
-        --body3-line: 20px;
-        --body3-weight: 400;
-
-        /* Colores usados */
-        --neutral-white: #FFFFFF;
-        --gray-50:   #F9FAFB;
-        --gray-100:  #F3F4F6;
-        --gray-200:  #E5E7EB;
-        --gray-300:  #D1D5DB;
-        --gray-400:  #9CA3AF;
-        --gray-500:  #6B7280;
-        --gray-600:  #4B5563;
-        --gray-700:  #374151;
-        --gray-800:  #1F2937;
-        --gray-900:  #111827;
-        --gray-950:  #030712;
-        --emerald-500: #10B981;
-        }
-    
-        /* Headings */
-        .h1 {
-        font-family: var(--font-family);
-        font-size: var(--h1-desktop-size);
-        line-height: var(--h1-desktop-line);
-        font-weight: var(--h1-desktop-weight);
-        letter-spacing: -0.02em;
-        color: var(--gray-900);
-        }
-
-        .h2 {
-        font-family: var(--font-family);
-        font-size: var(--h2-desktop-size);
-        line-height: var(--h2-desktop-line);
-        font-weight: var(--h2-desktop-weight);
-        letter-spacing: -0.02em;
-        color: var(--gray-900);
-        }
-
-        .h3 {
-        font-family: var(--font-family);
-        font-size: var(--h3-desktop-size);
-        line-height: var(--h3-desktop-line);
-        font-weight: var(--h3-desktop-weight);
-        letter-spacing: -0.02em;
-        color: var(--gray-900);
-        }
-
-        /* Subtítulo */
-        .subtitle {
-        font-size: var(--subtitle-size);
-        line-height: var(--subtitle-line);
-        font-weight: var(--subtitle-weight);
-        color: var(--gray-600);
-        }
-
-        /* Cuerpo de texto */
-        .body1 {
-        font-size: var(--body1-size);
-        line-height: var(--body1-line);
-        font-weight: var(--body1-weight);
-        color: var(--gray-600);
-        }
-
-        .body2 {
-        font-size: var(--body2-size);
-        line-height: var(--body2-line);
-        font-weight: var(--body2-weight);
-        color: var(--gray-600);
-        }
-
-        .body3 {
-        font-size: var(--body3-size);
-        line-height: var(--body3-line);
-        font-weight: var(--body3-weight);
-        color: var(--gray-600);
-        }
-
-        .box-shadow-md{
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .box-shadow-lg{
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .box-shadow-2xl{
-            box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
-        }
-
-        body{
-            font-family: 'Inter', system-ui, Arial, sans-serif;
-            font-size: 16px;
-            line-height: 24px;
-            color: var(--gray-900);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        /*Estilos de la barra de navegacion principal*/
-        .navbar{
-            position: sticky;
-            top: 0;
-            padding: 16px 80px;
-            margin: auto;
-            z-index: 999;
-            background: #ffffff;
-            border-bottom: 1px solid var(--gray-800);
-        }
-
-        .navbar a { 
-            color: #111827;
-            text-decoration: none; 
-        }
-
-        .navbar a:hover {
-            text-decoration: underline; 
-        }
-
-        /*Estilos contenedor principal de la barra de navegacion*/
-        .navbar_inner{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-right: 32px;
-            padding-left: 32px;
-        }
-
-        .navbar_inner_left_block{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .navbar_inner_right_block{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .links{
-            list-style: none;
-            display:flex;
-            margin: 0;
-            padding: 0;
-            gap: 24px;
-        }
-
-        .divider{
-            color: lightgray;
-        }
-
-
-        button{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        button.download_button{
-            background-color: #0f172a;
-            color: #F9FAFB;
-            padding: 6px 16px;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-        button.light_mode{
-            background: transparent;
-            padding: 6px;
-            border-radius: 8px;
-            border: none;
-            width: 36px;
-            height: 36px;
-        }
-
-        .new_section{
-            padding: 96px 80px;
-        }
-
-        .new_section p{
-            color: var(--gray-600);
-            margin:0;
-        }
-
-        .content{
-            display: flex;
-            justify-content: center;
-            padding-left: 32px;
-            padding-right: 32px;
-            gap:48px;
-        }
-
-        .left_col{
-            display: flex;
-            flex-direction: column;
-            gap:48px;
-        }
-
-        .titulo_new_section{
-            gap:8px;
-            margin:0;
-            color: var(--gray-900);
-        }
-
-        .datos_new_section{
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            gap:8px;
-        }
-
-        .datos_new_section span{
-            color: var(--gray-600)
-        }
-
-        .actions{
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            gap: 16px;
-        }
-        .actions--contact_details{
-            justify-content: center;
-            gap:20px;
-        }
-
-        .actions img{
-            padding:6px;
-            border-radius: 8px;
-            color: var(--gray-600)
-        }
-
-        .actions img:hover{
-            background-color: var(--gray-100);
-            color: var(--gray-700);
-        }
-        .actions img:active{
-            background-color: var(--gray-200);
-            color: var(--gray-600);
-        }
-
-        
-        .right_col{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        img.foto_perfil{
-            align-items: center;
-            justify-content: center;
-            width: 50%;
-            height: auto;
-            border: 8px solid white;
-            box-shadow: 20px 20px var(--gray-200);
-        }
-
-        /*Ajustes clases about-me*/
-        .new_section--alt{
-            background: var(--gray-50);
-        }
-        .content--stack {
-            flex-direction: column;
-        }
-        #about-me .foto_perfil{
-            width: 480px;
-            height: auto;
-            border: 8px solid white;
-            box-shadow: -20px 20px var(--gray-200);
-        }
-
-        .section_title{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap:16px;
-        }
-        
-        .title_pill{
-            background-color: var(--gray-200);
-            color: var(--gray-600);
-            padding: 4px 20px;
-            border-radius: 12px;
-        }
-
-        .section_content{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 48px;
-        }
-
-        .section_content--skills{
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: none;
-        }
-
-        .section_content--testimonials{
-            grid-template-columns: 1fr 1fr 1fr;
-            border-radius: 12px;
-        }
-
-
-        .about_me_left_col{
-            justify-self: center;
-            align-self: center;
-        }
-
-
-        .skills-row{
-            display: flex;
-            justify-content: space-between;
-            justify-items: center;
-            align-items: center;
-            gap: auto;
-        }
-
-        .skills-box{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .skills-box img{
-            width: 64px;
-            height: auto;
-        }
-
-        .experience_card{
-            padding: 32px;
-            border-radius: 12px;
-            background-color: white;
-        }
-
-        .experience_card_content{
-            display: grid;
-            align-items: start;
-            justify-items: center;
-            grid-template-columns: 1fr 2fr 1fr;
-            gap:48px;
-        }
-
-        .experience_card img{
-            width: 100px;
-            height: auto;
-        }
-
-        .experience_card_central_col{
-            display: flex;
-            flex-direction: column;
-            gap:16px;
-        }
-        .experience_card_central_col h3{
-            margin:0;
-        }
-        .experience_card_central_col ul{
-            margin: 0;
-        }
-
-        .work_card{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            border-radius: 12px;
-            background-color: white;
-        }
-
-        .work_card_left{
-            background-color: var(--gray-50);
-            border-right: 1px solid var(--gray-100);
-            padding: 48px;
-        }
-
-        .work_card_left--var{
-            border-left: 1px solid var(--gray-100);
-            border-right: none;
-        }
-
-        .work_card_right{
-            display: flex;
-            flex-direction: column;
-            padding: 48px;
-            border-radius: 12px;
-            gap:24px;
-        }
-
-        .work_card_right--testimonials{
-            background-color: white;
-            align-items: center;
-        }
-
-        .work_card_left img{
-            width: 480px;
-            height: auto;
-            align-items: center;
-            border-radius: 12px;
-        }
-
-        .technologies{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .testimonial_icon{
-            padding: 20px;
-            border-radius: 64px;
-            background-color: #9CA3AF;
-            align-items: center;
-            justify-items: center;
-            gap: 10px;
-        }
-
-        .testimonial_icon img{
-            display: flex;
-            width: 40px;
-            height: 40px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .customer_details{
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            align-items: center;
-            justify-items: center;
-        }
-
-        .other_platforms{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-        }
-
-        footer{
-            padding: 24px 80px;
-            background-color: var(--gray-50);
-        }
-
-        .footer_content{
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .justified_text{
-            text-align: justify;
-        }
-
-        .centered_text{
-            text-align: center;
-        }
-
-
-                
-    </style>
-
 </head>
 
 <body>
     <header class="navbar" id="top">
         <div class="navbar_inner">
-            <a href="#top">HOME</a>
+            <a href="#hero">HOME</a>
 
             <nav class="navbar_inner_left_block">
                 <ul class="links">
@@ -542,352 +32,370 @@
     </header>
 
 
+    <main>
 
-    <main class="new_section" id="new_section">
-        <div class="content">
-            <div class="left_col">
-                <div class="titulo_new_section">
-                    <h1>Hi, Im Javier Revuelta 👋</h1>
-                    <p>I'm a web developer and AI enthusiast who enjoys turning ideas into real, functional,<br> and visually appealing digital experiences. My main focus is on building fast, accessible,<br> and modern websites using today's best tools and practices.
-                        Even though I'm still growing<br> and learning, I have a strong curiosity to explore how intelligent systems and web<br> technologies can come together to create innovative solutions. Every project I work on is an<br> opportunity to improve, learn something new, and push my limits as a developer.</p>
+        <!-- HERO -->
+        <section class="new_section" id="hero">
+            <div class="content">
+
+                <!-- Parte Izq -->
+                <div class="left_col">
+                    <div class="titulo_new_section">
+                        <h1>Hi, Im Javier Revuelta 👋</h1>
+                        <p class="body2 justified_text">I'm a web developer and AI enthusiast who enjoys turning ideas into real, functional,<br> and visually appealing digital experiences. My main focus is on building fast, accessible,<br> and modern websites using today's best tools and practices.
+                            Even though I'm still growing<br> and learning, I have a strong curiosity to explore how intelligent systems and web<br> technologies can come together to create innovative solutions. Every project I work on is an<br> opportunity to improve, learn something new, and push my limits as a developer.</p>
+                    </div>
+
+                    <div class="datos_new_section">
+                        <span class="body2" style="display:flex; gap:8px;"><img src="icons/icon-location-24.svg" alt="icono ubicacion">Zaragoza, España</span>
+                        <ul style="color:var(--emerald-500); margin:0; margin-left: -15px;">
+                            <li><span class="body2">Available for new projects</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="actions">
+                        <div style="display: flex; gap: 4px; justify-content: left;">
+                            <a href="https://github.com/JavierRevueltaFernandez" target="_blank"><img src="icons/icon-github-24.svg" alt="icono Github"></a>
+                            <a href="https://www.linkedin.com/in/javierrevueltafernandez/" target="_blank"><img src="icons/icon-linkedin-24.png" alt="icono LinkedIn"></a>
+                            <img src="icons/icon-figma-24.svg" alt="icono Figma">
+                        </div>
+                    </div>
                 </div>
-                <div class="datos_new_section">
-                    <span style="display:flex; gap:8px;"><img src="icons/icon-location-24.svg" alt="icono ubicacion">Zaragoza, España</span>
-                    <ul style="color:var(--emerald-500); margin:0; margin-left: -15px;">
-                        <li><span>Available for new projects</span></li>
-                    </ul>
+
+                <!-- Parte Dcha -->
+                <figure class="right_col">
+                    <img class="foto_perfil" src="icons/foto-perfil-portfolio.jpg" alt="Retrato Javier Revuelta">
+                </figure>
+            </div>
+        </section>
+
+
+
+        <!-- ABOUT ME -->
+        <section class="new_section new_section--alt" id="about-me">
+            <div class="content content--stack">
+                <div class="section_title">
+                    <span class="title_pill body3 body3--medium">About me</span>
                 </div>
-                <div class="actions">
-                    <div style="display: flex; gap: 4px; justify-content: left;">
-                        <a href="https://github.com/JavierRevueltaFernandez" target="_blank"><img src="icons/icon-github-24.svg" alt="icono Github"></a>
-                        <a href="https://www.linkedin.com/in/javierrevueltafernandez/" target="_blank"><img src="icons/icon-linkedin-24.png" alt="icono LinkedIn"></a>
-                        <img src="icons/icon-figma-24.svg" alt="icono Figma">
+
+
+                <div class="section_content">
+                    <figure class="about_me_left_col">
+                        <img class="foto_perfil" src="icons/foto-about-me.jpg" alt="foto del autor en un bosque de Vietnam">
+                    </figure>
+
+                    <div id="about_me_right_col">
+                        <h3>Curious about me? Here you have it:</h3>
+                        <p class="body2" style="text-align: justify;"> I'm a curious and creative mind studying Computer Engineering and Artificial Intelligence, passionate about building digital tools that make technology more human. I love transforming ideas into real, accessible, and efficient products whether it's a web app, an AI prototype, or an automation system that saves time and energy.<br>
+                            I started my journey as a web developer and programmer a few years ago, and since then, I've continued to grow and explore the intersection between software and intelligence. From developing responsive websites using HTML, CSS, and JavaScript, to experimenting with Python and Machine Learning, I've learned that great technology is not just about code, but about creativity and curiosity.
+                            I'm constantly improving my skills by working on personal projects and collaborating with others. I enjoy sharing knowledge, learning from different disciplines, and finding ways to make things smarter through automation and AI.
+                            When I'm not coding, you can find me exploring new places, reading about innovation, or connecting with other developers and creators on <a href="https://www.linkedin.com/in/javierrevueltafernandez/" target="_blank">LinkedIn</a> or <a href="https://github.com/JavierRevueltaFernandez" target="_blank">GitHub.</a>
+                            I believe that every project, big or small, is an opportunity to grow, learn, and make a difference.
+                            <br><br>Finally, some quick bits about me:<br></p>
+                            <ul class="body2">
+                                <li>B.Sc. in Computer Engineering & Artificial Intelligence</li>
+                                <li>Avid learner and problem-solver</li>
+                                <li>Web developer & automation enthusiast</li>
+                                <li>Passionate about AI and productivity tools</li>
+                            </ul>
+                            <p class="body2" style="text-align: justify;">One last thing: I'm always open to exciting collaborations, so feel free to reach out on LinkedIn
+                            or check out my work on GitHub. I promise I don't bite 😉</p>
+                        
                     </div>
                 </div>
             </div>
-            <div class="right_col">
-                <img class="foto_perfil" src="icons/foto-perfil-portfolio.jpg" alt="foto de perfil">
+            
+        </section>
+
+
+
+        <!-- SKILLS -->
+        <section class="new_section" id="skills">
+            <div class="content content--stack">
+                <div class="section_title">
+                    <span class="title_pill body3 body3--medium">Skills</span>
+                    <span class="subtitle">The skills, tools and technologies I am really good at:</span>
+                </div>
+                <div class="section_content section_content--skills">
+                    <div class="skills-row">
+                        <div class="skills-box"><img src="icons/icon-javscript.svg" alt="icono JavaScript"><p class="body1">Javascript</p></div>
+                        <div class="skills-box"><img src="icons/icon-typescript.svg" alt="icono TypeScript"><p class="body1">TypeScript</p></div>
+                        <div class="skills-box"><img src="icons/icon-react.svg" alt="icono React"><p class="body1">React</p></div>
+                        <div class="skills-box"><img src="icons/icon-nextjs.svg" alt="icono Next.js"><p class="body1">Next.js</p></div>
+                        <div class="skills-box"><img src="icons/icon-nodejs.svg" alt="icono Node.js"><p class="body1">Node.js</p></div>
+                        <div class="skills-box"><img src="icons/icon-express.svg" alt="icono Express.js"><p class="body1">Express.js</p></div>
+                        <div class="skills-box"><img src="icons/icon-nest.svg" alt="icono Nest.js"><p class="body1">Nest.js</p></div>
+                        <div class="skills-box"><img src="icons/icon-socket.svg" alt="icono Socket.io"><p class="body1">Socket.io</p></div>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-box"><img src="icons/icon-postgresql.svg" alt="icono PostgreSQL"><p class="body1">PostgreSQL</p></div>
+                        <div class="skills-box"><img src="icons/icon-mongodb.svg" alt="icono MongoDB"><p class="body1">MongoDB</p></div>
+                        <div class="skills-box"><img src="icons/icon-sass.svg" alt="icono Sass/Scss"><p class="body1">Sass/Scss</p></div>
+                        <div class="skills-box"><img src="icons/icon-tailwindcss.svg" alt="icono Tailwindcss"><p class="body1">Tailwindcss</p></div>
+                        <div class="skills-box"><img src="icons/icon-figma.svg" alt="icono Figma"><p class="body1">Figma</p></div>
+                        <div class="skills-box"><img src="icons/icon-cypress.svg" alt="icono Cypress"><p class="body1">Cypress</p></div>
+                        <div class="skills-box"><img src="icons/icon-storybook.svg" alt="icono Storybook"><p class="body1">Storybook</p></div>
+                        <div class="skills-box"><img src="icons/icon-git.svg" alt="icono Git"><p class="body1">Git</p></div>
+                    </div>
+                    
+                    
+                </div>
             </div>
-        </div>
+        </section>
+
+
+
+        <!-- EXPERIENCE -->
+        <section class="new_section new_section--alt" id="experience">
+
+            <div class="content content--stack">
+                <div class="section_title">
+                    <span class="title_pill body3 body3--medium">Experience</span>
+                    <span class="subtitle">Here is a quick summary of my most recent experiences:</span>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="experience_card box-shadow-md">
+                    <div class="experience_card_content">
+                        <img src="icons/logo-smartsensor.webp" alt="logo SmartSnesor Technologies">
+                    
+                        <div class="experience_card_central_col">
+                            <span class="subtitle-semi">AI Intern - SmartSensor Technologies</span>
+                            <ul class="body2">
+                                <li>Developed supervised ML models to predict sensor failures.</li>
+                                <li>Participated in the design of automated pipelines for deployment.</li>
+                                <li>Used Python, Pandas, Scikit-learn, Git</li>
+                            </ul>
+                        </div>
+
+                        <span class="body2">Feb 2023 - Jun 2023</span>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="experience_card box-shadow-md">
+                    <div class="experience_card_content">
+                        <img src="icons/logo-agencia-digital-sp.png" alt="logo Agencia Digital SP">
+                    
+                        <div class="experience_card_central_col">
+                            <span class="subtitle-semi">Web Developer Intern - Agencia Digital SP</span>
+                            <ul class="body2">
+                                <li>Development of dynamic and responsive websites with WordPress, PHP, and Elementor Pro.</li>
+                                <li>Collaboration with a team of four developers to create solutions focused on user experience.</li>
+                                <li>Implementation of API integrations and web performance optimization.</li>
+                                <li>Integration of professional work methodologies and development best practices.</li>
+                            </ul>
+                        </div>
+
+                        <span class="body2">Jul 2024 - Sep 2024</span>
+                    </div>
+                </div>
+                
+
+                <!-- Card 3 -->
+                <div class="experience_card box-shadow-md">
+                    <div class="experience_card_content">
+                        <img src="icons/logo-estudia.png" alt="logo EstudIA">
+                    
+                        <div class="experience_card_central_col">
+                            <span class="subtitle-semi">Personal Projects - Portfolio & AI Experiments</span>
+                            <ul class="body2">
+                                <li>Development of personal projects focused on web technology and machine learning.</li>
+                                <li>Creation of my own tools and websites using React, Next.js, and Python.</li>
+                                <li>Experimentation with generative AI models and data visualization.</li>
+                                <li>Focus on improving my design, logic, and deployment skills for real-world solutions.</li>
+                            </ul>
+                        </div>
+
+                        <span class="body2"> Jun 2023 - Present</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- WORK -->
+        <section class="new_section" id="work">
+            <div class="content content--stack">
+                <div class="section_title">
+                    <span class="title_pill body3 body3--medium">Work</span>
+                    <span class="subtitle">Some of the noteworthy projects I have built:</span>
+                </div>
+
+
+                <!-- Card 1 -->
+                <div class="work_card box-shadow-md">
+                    <div class="work_card_left">
+                        <img class="box-shadow-lg" src="icons/imagen-computacion-evolutiva.png" alt="Vista previa trabajo optimización distribución de sensores">
+                    </div>
+
+                    <div class="work_card_right">
+                        <span class="subtitle-semi">Optimization of Sensor Networks using Evolutionary Computation</span>
+                        <span class="body2 justified_text">A C-based evolutionary algorithm designed to optimize the spatial distribution of wireless
+                            sensors, balancing energy efficiency, coverage, and interference. The project simulated thousands 
+                            of sensor configurations and evolved them across generations to achieve optimal performance using 
+                            real-time fitness evaluation and statistical analysis.
+                        </span>
+                        <div class="technologies">
+                            <span class="title_pill body3 body3--medium">Data Analysis</span>
+                            <span class="title_pill body3 body3--medium">Evolutionary Algorithms</span>
+                            <span class="title_pill body3 body3--medium">Optimization</span>
+                            <span class="title_pill body3 body3--medium">C</span>
+                            <span class="title_pill body3 body3--medium">CSV</span>
+                            <span class="title_pill body3 body3--medium">Matplotlib</span>
+                        </div>
+                        <div class="actions">
+                            <a href="files/Memoria Trabajo Individual Sensores - Javier Revuelta.pdf" target="_blank"><img src="icons/Icon.svg" alt="icon to get a preview of the project"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="work_card box-shadow-md">
+                    <div class="work_card_right">
+                        <span class="subtitle-semi">Reinforcement Learning Agent — Q-Learning & CliffWalking</span>
+                        <span class="body2 justified_text">Implementation and analysis of a reinforcement learning agent
+                            trained using Q-Learning in the CliffWalking and Taxi environments. The project included policy 
+                            exploration, hyperparameter tuning, Q-table visualization, and performance comparison. The agent 
+                            successfully learned optimal navigation strategies through trial and reward-based adaptation.
+                        </span>
+                        <div class="technologies">
+                            <span class="title_pill body3 body3--medium">Python</span>
+                            <span class="title_pill body3 body3--medium">Q-Learning</span>
+                            <span class="title_pill body3 body3--medium">Gymnasium</span>
+                            <span class="title_pill body3 body3--medium">Numpy</span>
+                            <span class="title_pill body3 body3--medium">Pandas</span>
+                            <span class="title_pill body3 body3--medium">Matplotlib</span>
+                        </div>
+                        <div class="actions">
+                            <a href="files/Proyecto Final - Aprendizaje por Refuerzo y Q-Learning.pdf" target="_blank"><img src="icons/Icon.svg" alt="icon to get a preview of the project"></a>
+                        </div>
+                    </div>
+
+                    <div class="work_card_left work_card_left--var">
+                        <img class="box-shadow-lg" src="icons/cliff_walking.gif" alt="Entorno Q-Learning CliffWalking">
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="work_card box-shadow-md">
+                    <div class="work_card_left">
+                        <img class="box-shadow-lg" src="icons/bomberman.webp" alt="imagen videojuego bomberman">
+                    </div>
+
+                    <div class="work_card_right">
+                        <span class="subtitle-semi">Old-School Videogame in RISC-V Assembly</span>
+                        <span class="body2 justified_text">Development of a functional retro-style game inspired by Bomberman, 
+                            programmed entirely in RISC-V assembly using the RARS simulator. The project involved translating 
+                            high-level logic from C to assembly, implementing subroutines, memory management, and input/output handling at the low level.
+                        </span>
+                        <div class="technologies">
+                            <span class="title_pill body3 body3--medium">Computer Architecture</span>
+                            <span class="title_pill body3 body3--medium">Low-Level Programming</span>
+                            <span class="title_pill body3 body3--medium">RARS</span>
+                            <span class="title_pill body3 body3--medium">C</span>
+                            <span class="title_pill body3 body3--medium">Assembly (RISC-V)</span>
+                        </div>
+                        <div class="actions">
+                            <a href="files/Memoria Trabajo Final - Videojuegos a la Old School.pdf" target="_blank"><img src="icons/Icon.svg" alt="icon to get a preview of the project"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- TESTIMONIALS -->
+        <section class="new_section new_section--alt" id="testimonials">
+            <div class="content content--stack">
+                <div class="section_title">
+                    <span class="title_pill body3 body3--medium">Testimonials</span>
+                    <span class="subtitle">Nice things people have said about me:</span>
+                </div>
+
+
+                <div class="section_content section_content--testimonials">
+                    <div class="work_card_right work_card_right--testimonials box-shadow-md">
+                        <div class="testimonial_icon"><img src="icons/icon-user.svg" alt="user icon"></div>
+                        <span class="body2 justified_text">“During his internship at Agencia SP, Javier showed great professionalism and adaptability to a real-world workflow. His proficiency with WordPress, PHP, and Elementor, along with his attention to detail, contributed significantly to improving the performance and usability of several client websites.”</span>
+                        <div class="customer_details">
+                            <span class="subtitle-semi">Santiago Ponce</span>
+                            <span class="body3 centered_text">Project Manager - Agencia Digital SP</span>
+                        </div>
+                    </div>
+
+                    <div class="work_card_right work_card_right--testimonials box-shadow-md">
+                        <div class="testimonial_icon"><img src="icons/icon-user.svg" alt="user icon"></div>
+                        <span class="body2 justified_text">“Javier stood out for his ability to combine technical precision with creative problem-solving. In his Evolutionary Computation project, he demonstrated a deep understanding of genetic algorithms and excellent implementation skills in C. The result was a project with professional-level quality.”</span>
+                        <div class="customer_details">
+                            <span class="subtitle-semi">Mr. Carlos Gracia</span>
+                            <span class="body3 centered_text">Professor of Evolutionary Computation - Universidad San Jorge</span>
+                        </div>
+                    </div>
+                            
+                    <div class="work_card_right work_card_right--testimonials box-shadow-md">
+                        <div class="testimonial_icon"><img src="icons/icon-user.svg" alt="user icon"></div>
+                        <span class="body2 justified_text">“What impressed me most about Javier was his constant curiosity and drive to go beyond expectations. In the Q-Learning project, he not only completed the CliffWalking and Taxi environments but also performed a detailed analysis of the agent’s behavior, showing remarkable analytical depth for his level.”</span>
+                        <div class="customer_details">
+                            <span class="subtitle-semi">Sergio Gracia</span>
+                            <span class="body3 centered_text">Machine Learning Tutor - Universidad San Jorge</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- CONTACT -->
+        <section class="new_section" id="contact">
+            <div class="content content--stack">
+                <div class="section_title">
+                    <span class="title_pill body3 body3--medium">Get in touch</span>
+                    <span class="subtitle">What's next? Feel free to reach out to me if you're looking for<br> a developer, have a query, or simply want to connect.</span>
+                </div>
+
+                <div class="section_title">
+                    <div class="actions actions--contact_details">
+                        <a href="mailto:alu.163290@usj.es"><img src="icons/icon-email.svg" alt="icon email"></a>
+                        <h2 style="margin: 0;">alu.163290@usj.es</h2>
+                        <img src="icons/icon-copy.svg" alt="icon copy">
+                    </div>
+                    <div class="actions actions--contact_details">
+                        <img src="icons/icon-telephone.svg" alt="icon telephone">
+                        <h2 style="margin: 0;">+34 690088951</h2>
+                        <img src="icons/icon-copy.svg" alt="icon copy">
+                    </div>
+                </div>
+
+                <div class="other_platforms">
+                    <span class="body2">You may also find me on these platforms!</span>
+                    <div class="actions">
+                        <div style="display: flex; gap: 4px; justify-content: left;">
+                            <a href="https://github.com/JavierRevueltaFernandez" target="_blank"><img src="icons/icon-github-24.svg" alt="icono Github"></a>
+                            <a href="https://www.linkedin.com/in/javierrevueltafernandez/" target="_blank"><img src="icons/icon-linkedin-24.png" alt="icono LinkedIn"></a>
+                            <img src="icons/icon-figma-24.svg" alt="icono Figma">
+                        </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
 
-    <section class="new_section new_section--alt" id="about-me">
-        <div class="content content--stack">
-            <div class="section_title">
-                <span class="title_pill">About me</span>
-            </div>
-
-            <div class="section_content">
-                <div class="about_me_left_col">
-                    <img class="foto_perfil" src="icons/foto-about-me.jpg" alt="foto del autor en la playa">
-                </div>
-                <div id="about_me_right_col">
-                    <h2>Curious about me? Here you have it:</h2>
-                    <p style="text-align: justify;"> I'm a curious and creative mind studying Computer Engineering and Artificial Intelligence, passionate about building digital tools that make technology more human. I love transforming ideas into real, accessible, and efficient products whether it's a web app, an AI prototype, or an automation system that saves time and energy.<br>
-                        I started my journey as a web developer and programmer a few years ago, and since then, I've continued to grow and explore the intersection between software and intelligence. From developing responsive websites using HTML, CSS, and JavaScript, to experimenting with Python and Machine Learning, I've learned that great technology is not just about code, but about creativity and curiosity.
-                        I'm constantly improving my skills by working on personal projects and collaborating with others. I enjoy sharing knowledge, learning from different disciplines, and finding ways to make things smarter through automation and AI.
-                        When I'm not coding, you can find me exploring new places, reading about innovation, or connecting with other developers and creators on <a href="https://www.linkedin.com/in/javierrevueltafernandez/" target="_blank">LinkedIn</a> or <a href="https://github.com/JavierRevueltaFernandez" target="_blank">GitHub.</a>
-                        I believe that every project, big or small, is an opportunity to grow, learn, and make a difference.
-                        <br><br>Finally, some quick bits about me:<br>
-                        <ul>
-                            <li>B.Sc. in Computer Engineering & Artificial Intelligence</li>
-                            <li>Avid learner and problem-solver</li>
-                            <li>Web developer & automation enthusiast</li>
-                            <li>Passionate about AI and productivity tools</li>
-                        </ul>
-                        One last thing: I'm always open to exciting collaborations, so feel free to reach out on LinkedIn
-                        or check out my work on GitHub. I promise I don't bite 😉
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-
-
-
-    <!-- <section class="new_section" id="skills">
-        <div class="content content--stack">
-            <div class="section_title">
-                <span class="title_pill">Skills</span>
-                <span>The skills, tools and technologies I am really good at:</span>
-            </div>
-            <div class="section_content section_content--skills">
-                <div class="skills-row">
-                    <div class="skills-box"><img src="icons/icon-javscript.svg" alt="icono JavaScript"><p>Javascript</p></div>
-                    <div class="skills-box"><img src="icons/icon-typescript.svg" alt="icono TypeScript"><p>TypeScript</p></div>
-                    <div class="skills-box"><img src="icons/icon-react.svg" alt="icono React"><p>React</p></div>
-                    <div class="skills-box"><img src="icons/icon-nextjs.svg" alt="icono Next.js"><p>Next.js</p></div>
-                    <div class="skills-box"><img src="icons/icon-nodejs.svg" alt="icono Node.js"><p>Node.js</p></div>
-                    <div class="skills-box"><img src="icons/icon-express.svg" alt="icono Express.js"><p>Express.js</p></div>
-                    <div class="skills-box"><img src="icons/icon-nest.svg" alt="icono Nest.js"><p>Nest.js</p></div>
-                    <div class="skills-box"><img src="icons/icon-socket.svg" alt="icono Socket.io"><p>Socket.io</p></div>
-                </div>
-                <div class="skills-row">
-                    <div class="skills-box"><img src="icons/icon-postgresql.svg" alt="icono PostgreSQL"><p>PostgreSQL</p></div>
-                    <div class="skills-box"><img src="icons/icon-mongodb.svg" alt="icono MongoDB"><p>MongoDB</p></div>
-                    <div class="skills-box"><img src="icons/icon-sass.svg" alt="icono Sass/Scss"><p>Sass/Scss</p></div>
-                    <div class="skills-box"><img src="icons/icon-tailwindcss.svg" alt="icono Tailwindcss"><p>Tailwindcss</p></div>
-                    <div class="skills-box"><img src="icons/icon-figma.svg" alt="icono Figma"><p>Figma</p></div>
-                    <div class="skills-box"><img src="icons/icon-cypress.svg" alt="icono Cypress"><p>Cypress</p></div>
-                    <div class="skills-box"><img src="icons/icon-storybook.svg" alt="icono Storybook"><p>Storybook</p></div>
-                    <div class="skills-box"><img src="icons/icon-git.svg" alt="icono Git"><p>Git</p></div>
-                </div>
-                
-                
-            </div>
-        </div>
-    </section> -->
-
-
-
-    <section class="new_section new_section--alt" id="experience">
-
-        <div class="content content--stack">
-            <div class="section_title">
-                <span class="title_pill">Experience</span>
-                <span>Here is a quick summary of my most recent experiences:</span>
-            </div>
-
-            <!-- Card 1 -->
-            <div class="experience_card box-shadow-md">
-                <div class="experience_card_content">
-                    <img src="icons/logo-smartsensor.webp" alt="logo SmartSnesor Technologies">
-                
-                    <div class="experience_card_central_col">
-                        <h3>AI Intern - SmartSensor Technologies</h3>
-                        <ul>
-                            <li>Developed supervised ML models to predict sensor failures.</li>
-                            <li>Participated in the design of automated pipelines for deployment.</li>
-                            <li>Used Python, Pandas, Scikit-learn, Git</li>
-                        </ul>
-                    </div>
-
-                    <span>Feb 2023 - Jun 2023</span>
-                </div>
-            </div>
-
-
-            <!-- Card 2 -->
-            <div class="experience_card box-shadow-md">
-                <div class="experience_card_content">
-                    <img src="icons/logo-agencia-digital-sp.png" alt="logo Agencia Digital SP">
-                
-                    <div class="experience_card_central_col">
-                        <h3>Web Developer Intern - Agencia Digital SP</h3>
-                        <ul>
-                            <li>Development of dynamic and responsive websites with WordPress, PHP, and Elementor Pro.</li>
-                            <li>Collaboration with a team of four developers to create solutions focused on user experience.</li>
-                            <li>Implementation of API integrations and web performance optimization.</li>
-                            <li>Integration of professional work methodologies and development best practices.</li>
-                        </ul>
-                    </div>
-
-                    <span>Jul 2024 - Sep 2024</span>
-                </div>
-            </div>
-            
-
-            <!-- Card 3 -->
-            <div class="experience_card box-shadow-md">
-                <div class="experience_card_content">
-                    <img src="icons/logo-estudia.png" alt="logo EstudIA">
-                
-                    <div class="experience_card_central_col">
-                        <h3>Personal Projects - Portfolio & AI Experiments</h3>
-                        <ul>
-                            <li>Development of personal projects focused on web technology and machine learning.</li>
-                            <li>Creation of my own tools and websites using React, Next.js, and Python.</li>
-                            <li>Experimentation with generative AI models and data visualization.</li>
-                            <li>Focus on improving my design, logic, and deployment skills for real-world solutions.</li>
-                        </ul>
-                    </div>
-
-                    <span> Jun 2023 - Present</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="new_section" id="work">
-        <div class="content content--stack">
-            <div class="section_title">
-                <span class="title_pill">Work</span>
-                <span>Some of the noteworthy projects I have built:</span>
-            </div>
-
-
-            <!-- Card 1 -->
-            <div class="work_card box-shadow-md">
-                <div class="work_card_left">
-                    <img class="box-shadow-lg" src="icons/imagen-computacion-evolutiva.png" alt="Vista previa trabajo optimización distribución de sensores">
-                </div>
-
-                <div class="work_card_right">
-                    <span class="subtitle-semi-bold"><strong>Optimization of Sensor Networks using Evolutionary Computation</strong></span>
-                    <span style="text-align: justify;">A C-based evolutionary algorithm designed to optimize the spatial distribution of wireless
-                        sensors, balancing energy efficiency, coverage, and interference. The project simulated thousands 
-                        of sensor configurations and evolved them across generations to achieve optimal performance using 
-                        real-time fitness evaluation and statistical analysis.
-                    </span>
-                    <div class="technologies">
-                        <span class="title_pill">Data Analysis</span>
-                        <span class="title_pill">Evolutionary Algorithms</span>
-                        <span class="title_pill">Optimization</span>
-                        <span class="title_pill">C</span>
-                        <span class="title_pill">CSV</span>
-                        <span class="title_pill">Matplotlib</span>
-                    </div>
-                    <div class="actions">
-                        <a href="files/Memoria Trabajo Individual Sensores - Javier Revuelta.pdf" target="_blank"><img src="icons/Icon.svg" alt="icon to get a preview of the project"></a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Card 2 -->
-            <div class="work_card box-shadow-md">
-                <div class="work_card_right">
-                    <span class="subtitle-semi-bold"><strong>Reinforcement Learning Agent — Q-Learning & CliffWalking</strong></span>
-                    <span style="text-align: justify;">Implementation and analysis of a reinforcement learning agent
-                         trained using Q-Learning in the CliffWalking and Taxi environments. The project included policy 
-                         exploration, hyperparameter tuning, Q-table visualization, and performance comparison. The agent 
-                         successfully learned optimal navigation strategies through trial and reward-based adaptation.
-                    </span>
-                    <div class="technologies">
-                        <span class="title_pill">Python</span>
-                        <span class="title_pill">Q-Learning</span>
-                        <span class="title_pill">Gymnasium</span>
-                        <span class="title_pill">Numpy</span>
-                        <span class="title_pill">Pandas</span>
-                        <span class="title_pill">Matplotlib</span>
-                    </div>
-                    <div class="actions">
-                        <a href="files/Proyecto Final - Aprendizaje por Refuerzo y Q-Learning.pdf" target="_blank"><img src="icons/Icon.svg" alt="icon to get a preview of the project"></a>
-                    </div>
-                </div>
-
-                <div class="work_card_left work_card_left--var">
-                    <img class="box-shadow-lg" src="icons/cliff_walking.gif" alt="Entorno Q-Learning CliffWalking">
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="work_card box-shadow-md">
-                <div class="work_card_left">
-                    <img class="box-shadow-lg" src="icons/bomberman.webp" alt="imagen videojuego bomberman">
-                </div>
-
-                <div class="work_card_right">
-                    <span class="subtitle-semi-bold"><strong>Old-School Videogame in RISC-V Assembly</strong></span>
-                    <span style="text-align: justify;">Development of a functional retro-style game inspired by Bomberman, 
-                        programmed entirely in RISC-V assembly using the RARS simulator. The project involved translating 
-                        high-level logic from C to assembly, implementing subroutines, memory management, and input/output handling at the low level.
-                    </span>
-                    <div class="technologies">
-                        <span class="title_pill">Computer Architecture</span>
-                        <span class="title_pill">Low-Level Programming</span>
-                        <span class="title_pill">RARS</span>
-                        <span class="title_pill">C</span>
-                        <span class="title_pill">Assembly (RISC-V)</span>
-                    </div>
-                    <div class="actions">
-                        <a href="files/Memoria Trabajo Final - Videojuegos a la Old School.pdf" target="_blank"><img src="icons/Icon.svg" alt="icon to get a preview of the project"></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <section class="new_section new_section--alt" id="testimonials">
-        <div class="content content--stack">
-            <div class="section_title">
-                <span class="title_pill">Testimonials</span>
-                <span>Nice things people have said about me:</span>
-            </div>
-
-
-            <div class="section_content section_content--testimonials">
-                <div class="work_card_right work_card_right--testimonials box-shadow-md">
-                    <div class="testimonial_icon"><img src="icons/icon-user.svg" alt="user icon"></div>
-                    <span class="justified_text">“During his internship at Agencia SP, Javier showed great professionalism and adaptability to a real-world workflow. His proficiency with WordPress, PHP, and Elementor, along with his attention to detail, contributed significantly to improving the performance and usability of several client websites.”</span>
-                    <div class="customer_details">
-                        <span class="subtitle-semi-bold">Santiago Ponce</span>
-                        <span>Project Manager - Agencia Digital SP</span>
-                    </div>
-                </div>
-
-                <div class="work_card_right work_card_right--testimonials box-shadow-md">
-                    <div class="testimonial_icon"><img src="icons/icon-user.svg" alt="user icon"></div>
-                    <span class="justified_text">“Javier stood out for his ability to combine technical precision with creative problem-solving. In his Evolutionary Computation project, he demonstrated a deep understanding of genetic algorithms and excellent implementation skills in C. The result was a project with professional-level quality.”</span>
-                    <div class="customer_details">
-                        <span class="subtitle-semi-bold">Mr. Carlos Gracia</span>
-                        <span class="centered_text">Professor of Evolutionary Computation - Universidad San Jorge</span>
-                    </div>
-                </div>
-                        
-                <div class="work_card_right work_card_right--testimonials box-shadow-md">
-                    <div class="testimonial_icon"><img src="icons/icon-user.svg" alt="user icon"></div>
-                    <span class="justified_text">“What impressed me most about Javier was his constant curiosity and drive to go beyond expectations. In the Q-Learning project, he not only completed the CliffWalking and Taxi environments but also performed a detailed analysis of the agent’s behavior, showing remarkable analytical depth for his level.”</span>
-                    <div class="customer_details">
-                        <span class="subtitle-semi-bold">Sergio Gracia</span>
-                        <span class="centered_text">Machine Learning Tutor - Universidad San Jorge</span>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-
-
-    <section class="new_section" id="contact">
-        <div class="content content--stack">
-            <div class="section_title">
-                <span class="title_pill">Get in touch</span>
-                <span>What's next? Feel free to reach out to me if you're looking for<br> a developer, have a query, or simply want to connect.</span>
-            </div>
-
-            <div class="section_title">
-                <div class="actions actions--contact_details">
-                    <a href="mailto:alu.163290@usj.es"><img src="icons/icon-email.svg" alt="icon email"></a>
-                    <h2 style="color:var(--gray-900); margin:0;">alu.163290@usj.es</h2>
-                    <img src="icons/icon-copy.svg" alt="icon copy">
-                </div>
-                <div class="actions actions--contact_details">
-                    <img src="icons/icon-telephone.svg" alt="icon telephone">
-                    <h2 style="color:var(--gray-900); margin:0;">+34 690088951</h2>
-                    <img src="icons/icon-copy.svg" alt="icon copy">
-                </div>
-            </div>
-
-            <div class="other_platforms">
-                <span>You may also find me on these platforms!</span>
-                <div class="actions">
-                    <div style="display: flex; gap: 4px; justify-content: left;">
-                        <a href="https://github.com/JavierRevueltaFernandez" target="_blank"><img src="icons/icon-github-24.svg" alt="icono Github"></a>
-                        <a href="https://www.linkedin.com/in/javierrevueltafernandez/" target="_blank"><img src="icons/icon-linkedin-24.png" alt="icono LinkedIn"></a>
-                        <img src="icons/icon-figma-24.svg" alt="icono Figma">
-                    </div>
-            </div>
-        </div>
-    </section>
-
-
-
+    <!-- FOOTER -->
     <footer>
         <div class="content">
             <div class="footer_content">
                 <img src="icons/icon-copyright.svg" alt="icon copyright">
-                <span>2025 | Designed and coded with ❤️ by Javier Revuelta</span>
+                <span class="body3">2025 | Designed and coded with ❤️ by Javier Revuelta</span>
             </div>
         </div>
     </footer>
