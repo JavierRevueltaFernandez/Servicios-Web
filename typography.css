@@ -17,10 +17,10 @@ html, body { font-family: var(--ff-base); color: var(--gray-900); }
 /* DESKTOP (≥1024px) */
 
 /* Headings */
-h1 { font-size: 60px; line-height: 72px; letter-spacing: -0.02em; font-weight: var(--fw-bold);     color: var(--gray-900);}
+h1 { font-size: 60px; line-height: 72px; letter-spacing: -0.02em; font-weight: var(--fw-bold);     color: var(--gray-900); margin:0;}
 h2 { font-size: 36px; line-height: 40px; letter-spacing: -0.02em; font-weight: var(--fw-semibold); color: var(--gray-900);}
 h3 { font-size: 30px; line-height: 36px;                          font-weight: var(--fw-semibold); color: var(--gray-900);}
-.h3--bold { font-weight: var(--fw-bold); }
+.h3--bold { font-weight: var(--fw-bold); margin:0;}
 
 
 /* Subtitle */
@@ -51,8 +51,8 @@ h3 { font-size: 30px; line-height: 36px;                          font-weight: v
 
 /* MOBILE (<768px) */
 @media (max-width:767px){
-  h1 { font-size: 36px; line-height: 40px; letter-spacing: -0.02em; font-weight: var(--fw-semibold); margin:0;}
-  h2 { font-size: 18px; line-height: 28px; letter-spacing: -0.02em; font-weight: var(--fw-semibold); margin:0;}
+  h1 { font-size: 36px; line-height: 40px; letter-spacing: -0.02em; font-weight: var(--fw-semibold);}
+  h2 { font-size: 18px; line-height: 28px; letter-spacing: -0.02em; font-weight: var(--fw-semibold);}
   h3 { font-size: 24px; line-height: 32px; font-weight: var(--fw-semibold);}
 
   .subtitle, .subtitle-semi { font-size: 18px; line-height: 28px; }
